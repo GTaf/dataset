@@ -1,5 +1,5 @@
 # change the Vagrantfile to suppress ssh issues 
-#./repackage/suppress-ssh-warning.sh
+./repackage/suppress-ssh-warning.sh
 
 # boot up VM, provisioning to install camflow in the kernel
 vagrant up
