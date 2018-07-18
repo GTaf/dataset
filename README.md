@@ -14,6 +14,12 @@ However, dennisli1/frapbox does not have the latest camflow 4.12.4 installed, be
 
 In an attempt to remove both files before repackaging and updating camflow to the lastest version 4.12.4, the new box dennisli1/frapboxfc26 VMs boot up with different machine ids every time. However, there are several issues with fedora26. First, reboot seems to be a problem. The OS gets stuck on or before the login page without a clear pattern (mostly happen after the second reboot). Second, for some exploits to work, it has to have certain versions of the kernel libraries installed, but they can't be downgraded directly using dnf simply because the repository does not contain the older versions. In an attempt to remove them and install the older versions through rpm packages, some of kernel libraries can't be removed through dnf due to the consequences of removing "protected packages" like the program sudo. 
 
+## Update after fork
+
+Many attacks were not working 10 months after the creation of the initial dataset, this is because many of the rpms host removed them. Even after during the time I worked on this repository some of the rpm have been deleted. So there is a need to be able to store this rpms somewhere, to have this dataset running on the long term.
+
+Furthermore, there is a need to be sure that the attacks are really attacks. Vagrant is by default running every scripts as root, so gaining root access being already root might not be interesting to detect real attacks. You have to explicitely tell Vagrant to use a normal user for the scripts.
+
 ## List of vulnerabilities:
 - `wget`: CVE-2016-4971
 - `nagios`: CVE-2016-9566
