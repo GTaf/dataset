@@ -20,7 +20,9 @@ Many attacks were not working 10 months after the creation of the initial datase
 
 Furthermore, there is a need to be sure that the attacks are really attacks. Vagrant is by default running every scripts as root, so gaining root access being already root might not be interesting to detect real attacks. You have to explicitely tell Vagrant to use a normal user for the scripts.
 
-The updated working attacks as of 07/18/2018 are `wget`, `Tomcat`, `mariaDB-race`. `nagios` works but the scripts are still run as root. 
+The updated working attacks as of 07/18/2018 are `wget`, `Tomcat`, `mariaDB-race`, `mariaDB-root`. `nagios` works but the scripts are still run as root. Getting attacks based on Percona and MySQL should not be hard. I did not look at the Ruby attack.
+
+
 ## List of vulnerabilities:
 - `wget`: CVE-2016-4971
 - `nagios`: CVE-2016-9566
