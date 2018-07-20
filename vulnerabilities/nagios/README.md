@@ -6,7 +6,7 @@ they would be able to replace the log file with a symlink to an arbitrary file o
 
 This vulnerability could be used by an attacker to escalate their privileges
 from nagios user/group to root for example by creating a malicious 
-/etc/ld.so.preload file." (credit to: https://legalhackers.com)
+/etc/ld.so.preload file." (credit to: https://legalhackers.com/advisories/Nagios-Exploit-Root-PrivEsc-CVE-2016-9566.html)
 
 An important point to note is that a user has to have root privilages in order to have read/write permissions in directory /etc 
 
